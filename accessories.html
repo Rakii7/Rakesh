@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.498 4.498 0 0 1 7.965 13a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242.63 0 1.46-.118 2.152-.242a26.58 26.58 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434zm6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434z"/></svg>
+    <title>Document</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } 
+        /* video{
+            position:absolute;
+            opacity: 70%;
+            z-index:-1;
+            top:0;
+            left:0;
+            width:100%; 
+            height:100vh;
+        }  */
+        .v{
+            
+            position: fixed;
+            right: 0;
+             bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .sidebar{
+
+            position: absolute;
+            margin-top: -25px;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: black;
+            padding-top: 10px;
+            transition: all .5s ease;
+            z-index: 10;
+        }
+    
+        .sidebar ul a{
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 100px;
+            font-size: 25px;
+            color: aliceblue;
+            padding-left: 40px;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            border-bottom: 1px solid black;
+            text-decoration: none;
+            transition: 0.4s;
+        }
+    
+        ul li:hover a{
+            padding-left: 50px;
+    
+        }
+        .box1{
+            color: black;
+        }
+        #check{
+            display: none;
+        }
+        label #btn, label #cancel{
+            position: absolute;
+            cursor: pointer;
+            background: green;
+            border-radius: 3px;
+    
+        }
+        label #btn{
+            left: 40px;
+            top:25px;
+            font-size: 35px;
+            color: white;
+            padding: 6px 12px;
+            transition: all .5s; 
+            z-index: 2;
+        }
+        label #cancel{
+            z-index: 1111;
+            left: -195px;
+            top: 17px;
+            font-size: 30px;
+            color: yellow;
+            padding: 4px 9px;
+            transition: all .5s ease;
+        }
+        #check:checked ~ .sidebar{
+            left: 0;
+        }
+        #check:checked ~ label #btn{
+            left:250px;
+            opacity: 0;
+            pointer-events: none;
+        }
+        #check:checked ~ label #cancel{
+            left:195px;
+            
+        } 
+    
+        /* .card1{
+            height: 300px;
+        } */
+         .container{
+            display: flex;
+            justify-content: center; 
+
+        }
+        #g{
+            z-index: 2;
+            width: 220px;
+            height: 110px;
+            border-style: double ;
+            padding-top: -15px;
+            padding-left: 5px;
+            align-content: center;
+            background: linear-gradient(yellow, white);
+            
+        }
+        #h{
+            z-index: 2;
+            width: 220px;
+            height: 110px;
+            border-style: double ;
+            padding-top: -5px;
+            padding-left: 5px;
+            background: linear-gradient(green,white);
+            
+        }
+        #d{
+            margin-left: 200px;
+        }
+        #r{
+            margin-right: 80px;
+        }
+        .c{
+            width:20rem;
+            opacity: 0.4;
+        }
+        .img11{
+            width: 100px;
+            height: 100px;
+            margin-left: 40px;
+            
+        }
+        /* .flip-box:hover .flip-card {
+ transform: rotateY(180deg);
+} */
+    .hrr{
+        margin-top: -5px;
+        margin-left: 109px;
+        margin-right: 1170px;
+        background: green;
+    }
+     #bo{
+        top: 10px;
+        left: 50px;
+        border-style: double;
+        z-index: 1111;
+        margin-left: 109px;
+        margin-right: 109px;
+     }
+        
+     
+    .and{
+        margin-bottom: 30px;
+    }
+    .con{
+        opacity: 40px;
+    }
+    .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+       /* .go{
+        opacity: 0.4;
+        background: linear-gradient(pink, white);
+       } */
+        
+    </style>
+</head>
+<body >
+    <div id="bo">
+    <input type="checkbox" id="check">
+    <label for="check"> 
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="container ">
+    <video class="v" src="InShot_20230620_193611333.mp4" autoplay muted loop></video>
+    </div>
+    <div class="sidebar ">
+        <ul>
+            <li> <a class="box1" href="main.html"><b>HOME</b> </a> </li>
+            <li> <a class="box2" href="cartoonss.html"> <b>CARTOONS AND RHYMES</b> </a> </li>
+            <li> <a class="box3" href="accessories.html"> <b>ACCESSORIES</b></a> </li>
+            <li> <a class="box4" href="ABOUTTT.HTML"> <b>ABOUT</b></a> </li>
+            <li> <a class="box5" href="Contact.html"> <b>CUSTOMER DETAILS</b></a> </li>
+        </ul>
+            </div>
+            
+           
+            
+            <div class="container justify-content-between">
+                <h1 id="g">Essentials</h1>  
+            </div>
+            <hr class="hrr">
+            
+            <div class="container ">
+                <div class="row">
+                <div class="col-md-6">
+                    <div class="card c">
+                        <img src="dress.jpg" alt="" class="card-img-top">
+                        <div class="card-body go">
+                          <h1 class="card-title">TOYS</h1>
+                          <p class="card-text"><b>Play happily</b></p>
+                          <a href="#" class="btn btn-primary">PLAY</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card c">
+                        <img  src="foods.webp" alt="" class="card-img-top">
+                        <div class="card-body go">
+                          <h1 class="card-title">FOODS</h1>
+                          <p class="card-text"><b>Eat healthy & stay happy</b></p>
+                          <a href="#" class="btn btn-primary">PLAY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div> 
+
+
+                    <div class="container justify-content-between and">
+                        <h1 id="h">PLAY ITEMS</h1>
+                    </div>
+                    <hr class="hrr">
+                    <div class="container ">
+                        <div class="row">
+                        <div class="col-md-6">
+                            <div class="card c">
+                                <img src="sportsss.webp" alt="" class="card-img-top">
+                                <div class="card-body go">
+                                  <h1 class="card-title">SPORTS</h1>
+                                  <p class="card-text"><b> Bat, Ball, Football</b></p>
+                                  <a href="#" class="btn btn-primary">PLAY</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 ">
+                            <div class="card c">
+                                <img src="toys.jpg" alt="" class="card-img-top">
+                                <div class="card-body go">
+                                  <h1 class="card-title">DRESS</h1>
+                                  <p class="card-text"><b>Colourful Dress</b></p>
+                                  <a href="#" class="btn btn-primary">PLAY</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>  
+                </div>
+            
+            
+    <script src="js/bootstrap.min.js">
+    </script>
+
+</body>
+</html>
+
